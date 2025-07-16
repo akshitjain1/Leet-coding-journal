@@ -13,7 +13,7 @@ public:
         vector<vector<bool>> dp(n + 1, vector<bool>(target + 1, false));
 
         for (int i = 0; i <= n; i++) {
-            dp[i][0] = true;  // sum 0 is always possible
+            dp[i][0] = true;  
         }
 
         for (int i = 1; i <= n; i++) {
