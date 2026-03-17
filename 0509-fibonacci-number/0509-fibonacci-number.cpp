@@ -1,4 +1,4 @@
-// Using linear Method
+// // Using linear Method
 // class Solution {
 // public:
 //     int fib(int n) {
@@ -16,7 +16,7 @@
 // };
 
 
-// Multiple Recursion Calls
+// Multiple Recursion Calls : Time Complexity would be higher due to recursion calls and space complxity is also higher : cuz stack remain intact untill all the recursion calls completes.
 class Solution{
     public:
     int f(int n){
