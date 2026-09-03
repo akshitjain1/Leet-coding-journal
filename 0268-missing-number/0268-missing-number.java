@@ -5,7 +5,7 @@ class Solution {
         for(int i =0;i<n;i++){
             list.add(nums[i]);
         }
-        for(int i = 1; i<=n;i++){
+        for(int i = 0; i<=n;i++){
             if(!(list.contains(i))){
                 return i;
             }
