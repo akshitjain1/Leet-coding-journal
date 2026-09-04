@@ -8,7 +8,7 @@ class Solution {
                 nums[write]=nums[read];
                 write++;
             }
-            continue;
+            
         }
         return write;
     }
