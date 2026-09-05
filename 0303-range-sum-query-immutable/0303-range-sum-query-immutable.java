@@ -1,17 +1,17 @@
 class NumArray {
-    private int[] running_sum ; 
+    private int[] prefix_sum ; 
     public NumArray(int[] nums) {
-        running_sum = new int[nums.length];
-        running_sum[0]=nums[0];
+        prefix_sum = new int[nums.length];
+        prefix_sum[0]=nums[0];
         for(int i =1;i<nums.length;i++){
-            running_sum[i] = running_sum[i-1]+nums[i];
+            prefix_sum[i] = prefix_sum[i-1]+nums[i];
         }
     }
     
     public int sumRange(int left, int right) {
-        if(left == 0) return running_sum[right];
-        // if(left==right) return running_sum[right]-running_sum[right-1];
-        return running_sum[right] - running_sum[left-1];
+        if(left == 0) return prefix_sum[right];
+        // if(left==right) return prefix_sum[right]-prefix_sum[right-1];
+        return prefix_sum[right] - prefix_sum[left-1];
 
     }
 }
