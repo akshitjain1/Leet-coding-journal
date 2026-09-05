@@ -10,7 +10,7 @@ class NumArray {
     
     public int sumRange(int left, int right) {
         if(left == 0) return running_sum[right];
-        if(left==right) return running_sum[right]-running_sum[right-1];
+        // if(left==right) return running_sum[right]-running_sum[right-1];
         return running_sum[right] - running_sum[left-1];
 
     }
