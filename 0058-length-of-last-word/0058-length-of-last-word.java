@@ -10,10 +10,12 @@ class Solution {
             break;}
         }
         for(int i =lastidx; i>=0;i--){
-            if(s.charAt(i) == ' '){
+            if(s.charAt(i) != ' '){
+                len++;
+            }else{
                 break;
             }
-            len++;
+            // len++;
         }
         return len;
     }
