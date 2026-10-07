@@ -9,6 +9,7 @@ class Solution {
             }else{
                 write++;
                 nums[write]=nums[read];
+                read++;
             }
         }
         return write+1;
