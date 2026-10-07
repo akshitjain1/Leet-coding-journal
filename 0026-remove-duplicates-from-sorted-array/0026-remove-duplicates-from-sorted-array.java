@@ -1,31 +1,16 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        if (nums.length==0){
-            return 0;
-        }
-        int write = 1;
-        for(int read = 1; read<nums.length;read++){
-            if(nums[read]!=nums[write-1]){
-                nums[write] = nums[read];
+        int read = 1;
+        int write = 0;
+        while(read < nums.length){
+            if(nums[read]==nums[write]){
+                read++;
+                continue;
+            }else{
                 write++;
+                nums[write]=nums[read];
             }
         }
-        return write;
+        return write+1;
     }
 }
-
-// class Solution {
-//     public int removeDuplicates(int[] nums) {
-//         HashSet<Integer> set = new HashSet<>();
-//         int write =0;
-//         for(int read =0;read<nums.length;read++){
-//             if(!set.contains(nums[read])){
-//                 set.add(nums[read]);
-//                 nums[write]=nums[read];
-//                 write++;
-//             }
-            
-//         }
-//         return write;
-//     }
-// }
