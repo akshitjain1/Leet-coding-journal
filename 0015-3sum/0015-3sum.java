@@ -31,7 +31,6 @@ class Solution {
                 } else {
                     right--; // Move right pointer leftward to decrease the sum
                 }
-                // Removed the accidental unconditional left++ and right-- from here
             }
         }
         return res;
