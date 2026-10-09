@@ -8,7 +8,7 @@ class Solution {
         for(int i = 0; i < a.length; i++){
             if(a[i] > 0) break;
 
-            // FIX 1: Check previous element to avoid skipping valid duplicates
+           // Check previous element to avoid skipping valid duplicates
             if(i > 0 && a[i] == a[i-1]) continue; 
 
             int left = i + 1;
@@ -20,7 +20,7 @@ class Solution {
                 if(s == target){
                     res.add(Arrays.asList(a[i], a[left], a[right]));
                     
-                    // FIX 4: Correctly skip duplicates before moving pointers out of the duplicate zone
+                    // Correctly skip duplicates before moving pointers out of the duplicate zone
                     while(left < right && a[left] == a[left+1]) { left++; }
                     while(left < right && a[right] == a[right-1]) { right--; }
                     
@@ -29,9 +29,9 @@ class Solution {
                 } else if(s < target){
                     left++;
                 } else {
-                    right--; // FIX 2: Move right pointer leftward to decrease the sum
+                    right--; // Move right pointer leftward to decrease the sum
                 }
-                // FIX 3: Removed the accidental unconditional left++ and right-- from here
+                // Removed the accidental unconditional left++ and right-- from here
             }
         }
         return res;
