@@ -1,12 +1,21 @@
 class Solution {
     public void sortColors(int[] nums) {
+        int z=0,o=0,t=0;
+    
         for(int i = 0;i<nums.length;i++){
-            for(int j = i+1; j<nums.length;j++){
-                if( nums[i]>nums[j]){
-                    int temp = nums[i];
-                    nums[i]=nums[j];
-                    nums[j]=temp;
-                }
+            if(nums[i]==0){z++;}
+            else if(nums[i]==1){o++;}
+            else{t++;}
+        }
+        o=z+o;
+        t=t+o;
+        for(int i =0 ; i<nums.length; i++){
+            if(i<z){
+                nums[i]=0;
+            }else if(i<o){
+                nums[i]=1;
+            }else{
+                nums[i]=2;
             }
         }
     }
